@@ -14,6 +14,29 @@ import MapView, { PROVIDER_GOOGLE }               from 'react-native-maps';
 /** Models / Types */
 import type { Region }                            from 'react-native-maps';
 
+/** Setup */
+
+const FACEBOOK = {
+  latitude: 37.485178,
+  longitude: -122.147135,
+  latitudeDelta: 0.02,
+  longitudeDelta: 0.02
+};
+
+const GOOGLE_PLEX = {
+  latitude: 37.422264,
+  longitude: -122.084036,
+  latitudeDelta: 0.02,
+  longitudeDelta: 0.02
+};
+
+const EIFFEL_TOWER = {
+  latitude: 48.858570,
+  longitude: 2.294493,
+  latitudeDelta: 0.02,
+  longitudeDelta: 0.02
+};
+
 type Props = {};
 type State = { region: ?Region, }
 export default class App extends Component<Props, State> {
@@ -25,9 +48,9 @@ export default class App extends Component<Props, State> {
 
   /** Button Handlers */
 
-  _showFacebook = (): void => {};
-  _showGoogle = (): void => {};
-  _showEiffelTower = (): void => {};
+  _showFacebook = (): void => this.setState({ region: FACEBOOK });
+  _showGoogle = (): void => this.setState({ region: GOOGLE_PLEX });
+  _showEiffelTower = (): void => this.setState({ region: EIFFEL_TOWER });
 
   /** Renderers */
 
