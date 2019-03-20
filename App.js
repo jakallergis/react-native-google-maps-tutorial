@@ -7,12 +7,12 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, { Component }                       from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, View, Button, SafeAreaView } from 'react-native';
-import MapView, { PROVIDER_GOOGLE }               from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 /** Models / Types */
-import type { Region }                            from 'react-native-maps';
+import type { Region } from 'react-native-maps';
 
 /** Setup */
 
@@ -38,7 +38,7 @@ const EIFFEL_TOWER = {
 };
 
 type Props = {};
-type State = { region: ?Region, }
+type State = { region: ?Region }
 export default class App extends Component<Props, State> {
 
   constructor(props: Props) {
@@ -60,7 +60,20 @@ export default class App extends Component<Props, State> {
         <MapView
           provider={ PROVIDER_GOOGLE }
           region={ this.state.region }
-          style={ styles.mapViewContainer } />
+          style={ styles.mapViewContainer }>
+          <Marker coordinate={ {
+            latitude: FACEBOOK.latitude,
+            longitude: FACEBOOK.longitude
+          } } />
+          <Marker coordinate={ {
+            latitude: GOOGLE_PLEX.latitude,
+            longitude: GOOGLE_PLEX.longitude
+          } } />
+          <Marker coordinate={ {
+            latitude: EIFFEL_TOWER.latitude,
+            longitude: EIFFEL_TOWER.longitude
+          } } />
+        </MapView>
         <View style={ styles.buttonsContainer }>
           <Button
             title={ 'Facebook' }
