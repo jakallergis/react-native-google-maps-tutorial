@@ -20,6 +20,10 @@ export default class Home extends React.Component<Props> {
     this.props.navigation.navigate('RegionChange');
   };
 
+  _goToAnimatedRegionChange = (): void => {
+    this.props.navigation.navigate('AnimatedRegionChange');
+  };
+
   /** Renderers */
 
   render() {
@@ -28,6 +32,9 @@ export default class Home extends React.Component<Props> {
         <Button
           title={ 'Region Change' }
           onPress={ this._goToRegionChange } />
+        <Button
+          title={ 'Animated Region Change' }
+          onPress={ this._goToAnimatedRegionChange } />
       </View>
     );
   }

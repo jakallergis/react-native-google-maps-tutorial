@@ -8,6 +8,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 /** Screens */
 import Home                                         from '../screens/Home';
 import RegionsChangeScreen                          from '../screens/RegionsChangeScreen';
+import AnimatedRegionsChangeScreen                  from '../screens/AnimatedRegionsChangeScreen';
 
 const MainStackNavigator = createStackNavigator({
   Home: {
@@ -20,6 +21,12 @@ const MainStackNavigator = createStackNavigator({
     screen: RegionsChangeScreen,
     navigationOptions: {
       title: 'Regions Change'
+    }
+  },
+  AnimatedRegionChange: {
+    screen: AnimatedRegionsChangeScreen,
+    navigationOptions: {
+      title: 'Animated Regions Change'
     }
   }
 });

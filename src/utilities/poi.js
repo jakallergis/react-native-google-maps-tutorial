@@ -3,6 +3,13 @@
  * @flow
  */
 
+export const APPLE = {
+  latitude: 37.446380,
+  longitude: -122.160751,
+  latitudeDelta: 0.02,
+  longitudeDelta: 0.02
+};
+
 export const FACEBOOK = {
   latitude: 37.485178,
   longitude: -122.147135,
