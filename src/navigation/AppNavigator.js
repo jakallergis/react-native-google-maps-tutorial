@@ -10,6 +10,7 @@ import Home                                         from '../screens/Home';
 import RegionsChangeScreen                          from '../screens/RegionsChangeScreen';
 import AnimatedRegionsChangeScreen                  from '../screens/AnimatedRegionsChangeScreen';
 import AnimatedAPIRegionsChangeScreen               from '../screens/AnimatedAPIRegionsChangeScreen';
+import AnimatedMarkerChangeScreen                   from '../screens/AnimatedMarkerChangeScreen';
 
 const MainStackNavigator = createStackNavigator({
   Home: {
@@ -34,6 +35,12 @@ const MainStackNavigator = createStackNavigator({
     screen: AnimatedAPIRegionsChangeScreen,
     navigationOptions: {
       title: 'Animated API Regions Change'
+    }
+  },
+  AnimatedMarkerChange: {
+    screen: AnimatedMarkerChangeScreen,
+    navigationOptions: {
+      title: 'Animated Marker Change'
     }
   }
 });
