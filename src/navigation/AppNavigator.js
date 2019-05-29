@@ -12,6 +12,7 @@ import AnimatedRegionsChangeScreen                  from '../screens/AnimatedReg
 import AnimatedAPIRegionsChangeScreen               from '../screens/AnimatedAPIRegionsChangeScreen';
 import AnimatedMarkerChangeScreen                   from '../screens/AnimatedMarkerChangeScreen';
 import RegionOutOfMarkersScreen                     from '../screens/RegionOutOfMarkersScreen';
+import PolygonScreen                                from '../screens/PolygonScreen';
 
 const MainStackNavigator = createStackNavigator({
   Home: {
@@ -48,6 +49,12 @@ const MainStackNavigator = createStackNavigator({
     screen: RegionOutOfMarkersScreen,
     navigationOptions: {
       title: 'Region out of Markers'
+    }
+  },
+  Polygon: {
+    screen: PolygonScreen,
+    navigationOptions: {
+      title: 'Polygon'
     }
   }
 });
