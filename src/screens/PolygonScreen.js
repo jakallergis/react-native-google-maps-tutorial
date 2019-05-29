@@ -8,7 +8,7 @@ import { StyleSheet, View, Button }                                  from 'react
 import MapView, { PROVIDER_GOOGLE, Polygon, AnimatedRegion, Marker } from 'react-native-maps';
 
 /** Models / Types */
-import type { Region, LatLng }                                       from 'react-native-maps';
+import type { Region }                                               from 'react-native-maps';
 
 /** Utilities */
 import { FACEBOOK, GOOGLE_PLEX, APPLE }                              from '../utilities/poi';
@@ -47,7 +47,7 @@ type Props = {
 }
 type State = {
   showMap: boolean,
-  points: LatLng[]
+  points: Point[]
 }
 export default class PolygonScreen extends Component<Props, State> {
   _currentRegion: AnimatedRegion;
@@ -67,14 +67,14 @@ export default class PolygonScreen extends Component<Props, State> {
 
   /** Button Handlers */
 
-  _onMapPress = (e) => {
+  _onMapPress = (e): void => {
     const coordinates = e.nativeEvent.coordinate;
     const newPoint = new Point(coordinates, `${ Date.now() }.${ Math.random() }`);
     const points = grahamScan.convexHull([...this.state.points, newPoint]);
     this.setState({ points }, this._showAll);
   };
 
-  _showAll = () => {
+  _showAll = (): void => {
     const points = this.state.points;
     const region = getRegionFromMarkers(points);
     this._currentRegion

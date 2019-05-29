@@ -40,12 +40,12 @@ export default class RegionOutOfMarkersScreen extends Component<Props, State> {
 
   /** Button Handlers */
 
-  _onMapPress = (e) => {
+  _onMapPress = (e): void => {
     const coordinate = e.nativeEvent.coordinate;
     this.setState({ markers: [...this.state.markers, coordinate] }, this._showPOIs);
   };
 
-  _showPOIs = () => {
+  _showPOIs = (): void => {
     const markers = this.state.markers;
     const region = getRegionFromMarkers(markers);
     this._currentRegion
