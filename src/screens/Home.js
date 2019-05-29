@@ -32,6 +32,10 @@ export default class Home extends React.Component<Props> {
     this.props.navigation.navigate('AnimatedMarkerChange');
   };
 
+  _goToRegionOutOfMarkers = (): void => {
+    this.props.navigation.navigate('RegionOutOfMarkers');
+  };
+
   /** Renderers */
 
   render() {
@@ -43,12 +47,15 @@ export default class Home extends React.Component<Props> {
         <Button
           title={ 'Animated Region Change' }
           onPress={ this._goToAnimatedRegionChange } />
-          <Button
+        <Button
           title={ 'Animated API Region Change' }
           onPress={ this._goToAnimatedAPIRegionChange } />
         <Button
           title={ 'Animated Marker Change' }
           onPress={ this._goToAnimatedMarkerChange } />
+        <Button
+          title={ 'Region out of Markers' }
+          onPress={ this._goToRegionOutOfMarkers } />
       </View>
     );
   }

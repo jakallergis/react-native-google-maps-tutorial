@@ -11,6 +11,7 @@ import RegionsChangeScreen                          from '../screens/RegionsChan
 import AnimatedRegionsChangeScreen                  from '../screens/AnimatedRegionsChangeScreen';
 import AnimatedAPIRegionsChangeScreen               from '../screens/AnimatedAPIRegionsChangeScreen';
 import AnimatedMarkerChangeScreen                   from '../screens/AnimatedMarkerChangeScreen';
+import RegionOutOfMarkersScreen                     from '../screens/RegionOutOfMarkersScreen';
 
 const MainStackNavigator = createStackNavigator({
   Home: {
@@ -41,6 +42,12 @@ const MainStackNavigator = createStackNavigator({
     screen: AnimatedMarkerChangeScreen,
     navigationOptions: {
       title: 'Animated Marker Change'
+    }
+  },
+  RegionOutOfMarkers: {
+    screen: RegionOutOfMarkersScreen,
+    navigationOptions: {
+      title: 'Region out of Markers'
     }
   }
 });
