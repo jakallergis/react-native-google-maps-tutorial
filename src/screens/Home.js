@@ -36,6 +36,10 @@ export default class Home extends React.Component<Props> {
     this.props.navigation.navigate('RegionOutOfMarkers');
   };
 
+  _goToCustomMarkers = (): void => {
+    this.props.navigation.navigate('CustomMarkers');
+  };
+
   _goToPolygons = (): void => {
     this.props.navigation.navigate('Polygon');
   };
@@ -60,6 +64,9 @@ export default class Home extends React.Component<Props> {
         <Button
           title={ 'Region out of Markers' }
           onPress={ this._goToRegionOutOfMarkers } />
+        <Button
+          title={ 'Custom Markers' }
+          onPress={ this._goToCustomMarkers } />
         <Button
           title={ 'Creating a Polygon' }
           onPress={ this._goToPolygons } />

@@ -42,6 +42,7 @@ class Point {
 const FB = new Point(FACEBOOK, 'facebook');
 const GP = new Point(GOOGLE_PLEX, 'google-plex');
 const AP = new Point(APPLE, 'apple');
+
 type Props = {
   navigation: any
 }
